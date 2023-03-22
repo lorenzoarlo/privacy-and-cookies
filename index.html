@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <title>Preferenze sui cookie</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header-bar">
+            <span class="title">
+                Pannello delle preferenze sui cookie
+            </span>
+            <span class="subtitle">
+                lorenzoarlo.github.io
+            </span>
+        </div>
+        <div class="about-content">
+            I cookie sono piccoli file di testo che possono essere utilizzati dai siti web per rendere più efficiente l'esperienza utente.
+            <br/>
+            Puoi modificare le preferenze da questa pagina in qualsiasi momento oppure puoi leggere la <a href="./privacy-policy.html" target="_blank">privacy policy</a>.
+        </div>
+        <hr/>
+        <div class="modify-content">
+            Ultima modifica effettuata: 
+            <span id="last-modify">
+                non salvata
+            </span>
+        </div>
+        <div class="button-content">
+            <button type="button" class="btn accept" onclick="set_cookies({'marketing': true, 'statistics': true})">
+                ACCETTA TUTTO
+            </button>
+        </div>
+        <hr/>
+        <div class="record">
+            <span class="label">Necessari</span>
+            <label class="switch">
+                <input type="checkbox" checked disabled />
+                <div class="slider round"></div>
+            </label>
+        </div>
+        <hr/>
+        <div class="record">
+            <span class="label">Statistiche</span>
+            <label class="switch">
+                <input type="checkbox" id="stats-chb" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+        <hr/>
+        <div class="record">
+            <span class="label">Marketing</span>
+            <label class="switch">
+                <input type="checkbox" id="marketing-chb" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+        <div class="button-content">
+            <button type="button" class="btn save" onclick="set_cookies(collect_data())">
+                SALVA
+            </button>
+        </div>
+    </div>
+</body>
+</html>
